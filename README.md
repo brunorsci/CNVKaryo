@@ -104,7 +104,7 @@ with this repository.
 ## Relationship to VKaryo
 
 cnvkaryo is the copy-number module of
-[VKaryo](https://github.com/brunorsci/VKaryo0.1), extracted to stand alone
+[VKaryo](https://github.com/brunorsci/VKaryo), extracted to stand alone
 and **DNA-only**: it does not require paired RNA-seq. Use cnvkaryo when copy
 number is the question and only DNA is available; use VKaryo when paired
 RNA-seq is in hand and fusions, structural variants and point mutations
