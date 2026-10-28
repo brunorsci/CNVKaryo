@@ -6,7 +6,12 @@ authors:
   - family-names: Assuncao
     given-names: Bruno Rodrigo
     email: brunorodrigoassuncao@gmail.com
-repository-code: "https://github.com/brunorsci/cnvkaryov1"
+repository-code: "https://github.com/brunorsci/CNVKaryo"
+doi: "10.5281/zenodo.23738890"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23738890"
+    description: "Archived release v1.0.0"
 license: MIT
 version: 1.0.0
 date-released: "2026-10-28"

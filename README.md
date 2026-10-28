@@ -11,6 +11,7 @@ would read.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Snakemake](https://img.shields.io/badge/snakemake-%E2%89%A57.0-brightgreen.svg)](https://snakemake.readthedocs.io)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23738890.svg)](https://doi.org/10.5281/zenodo.23738890)
 [![Version](https://img.shields.io/badge/version-1.0.0-informational.svg)](CITATION.cff)
 
 </div>
@@ -122,7 +123,25 @@ matter too.
 
 ## Citing
 
-Software citation metadata is in [`CITATION.cff`](CITATION.cff).
+If you use CNVKaryo, please cite the archived release:
+**[10.5281/zenodo.23738890](https://doi.org/10.5281/zenodo.23738890)**
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@software{cnvkaryo_2026,
+  author    = {Assuncao, Bruno Rodrigo},
+  title     = {CNVKaryo: virtual karyotyping from sequencing depth},
+  version   = {1.0.0},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23738890},
+  url       = {https://doi.org/10.5281/zenodo.23738890}
+}
+```
+
+</details>
 
 ## Licence
 
