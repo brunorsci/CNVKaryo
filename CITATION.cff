@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "cnvkaryo: virtual karyotyping from sequencing depth"
+message: "If you use this software, please cite it using these metadata."
+type: software
+authors:
+  - family-names: Assuncao
+    given-names: Bruno Rodrigo
+    email: brunorodrigoassuncao@gmail.com
+repository-code: "https://github.com/brunorsci/cnvkaryov1"
+license: MIT
+version: 1.0.0
+date-released: "2026-10-28"
+keywords:
+  - virtual karyotyping
+  - copy number variation
+  - aneuploidy
+  - whole-exome sequencing
+  - whole-genome sequencing
+  - cytogenetics
+  - Snakemake

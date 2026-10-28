@@ -1,0 +1,66 @@
+# cnvkaryo configuration
+#
+# Every path is resolved from this file. Entries marked /PATH/TO/... must be
+# edited before the first run; see docs/references.md.
+#
+# To confirm every path resolves, without executing anything:
+#   snakemake --configfile config/example.yaml --rulegraph > /dev/null
+
+# cnvkaryo config
+#
+# Large reference assets (genome, etc.) point to the original VKaryo
+# directory (read-only, never copied here -- multi-hundred GB). Only the
+# small CNVkit-specific files (capture kit BED, refFlat, gene coordinates,
+# cytoband) are copied into reference/ inside this repo.
+#
+# Color/classification source of truth for every plot: {sample}.call.cns
+# (cnvkit.py call, with sex inferred explicitly) -> three audit tables
+# (segments/bands/breakpoints, see scripts/export_cnv_tables.py).
+
+input:
+   fastq_dir: "/PATH/TO/fastq/"
+
+output: results/
+
+# Explicit sample list for this run. If empty/absent, falls back to
+# glob_wildcards over input.fastq_dir (every sample with fastq there).
+samples:
+   - ERR2990113
+   - ERR2990053
+   - ERR2990054
+
+# 'wes' (hybrid capture, needs exome_bed) or 'wgs' (needs no capture BED,
+# builds its own flat reference per sample from genome access regions).
+sequencing_type: wes
+
+# Genome build used by this run. Only hg38 has real assets right now --
+# hg19 is a scaffold (see genome_assets.hg19 below) until a genome + BWA
+# index + capture BED for hg19 are actually added.
+genome_build: hg38
+
+genome_assets:
+   hg38:
+      ref_dir: reference/
+      exome_bed: reference/Agilent_SureSelect_V6_hg38.bed  # only used when sequencing_type: wes
+      gene_coords: reference/gene_coords_hg38.tsv
+      refflat: reference/refFlat_hg38.txt
+      cytoband: reference/cytoBand_hg38.txt
+      ref: reference/GRCh38_character_genome.fasta
+   hg19: null  # TODO: add genome + BWA index + capture BED + refFlat + cytoband
+
+threads:
+   bwa: 13
+   fastp: 6
+
+cnv_reference:
+   # This run's samples are genuinely Agilent SureSelect V6 (the LL-100
+   # panel the kit BED above was built for) -- keep the matching reference.
+   default_mode: agilent_v6
+
+cnv:
+   # Gene list for this run/study -- only these genes are auto-highlighted
+   # in plots. Never "any gene in the genome" by default (see
+   # scripts/plot_gene.sh for on-demand single-gene requests, which
+   # register the gene here before plotting). Point this at a different
+   # list for a different study/context.
+   genes_of_interest: reference/genes_of_interest.tsv

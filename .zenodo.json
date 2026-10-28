@@ -1,0 +1,12 @@
+{
+  "title": "cnvkaryo: virtual karyotyping from sequencing depth",
+  "upload_type": "software",
+  "license": "MIT",
+  "version": "1.0.0",
+  "creators": [ { "name": "Assuncao, Bruno Rodrigo" } ],
+  "keywords": [
+    "virtual karyotyping", "copy number variation", "aneuploidy",
+    "whole-exome sequencing", "whole-genome sequencing", "cytogenetics", "Snakemake"
+  ],
+  "description": "Snakemake pipeline producing a virtual karyogram from read depth: whole-chromosome aneuploidy, arm and segment level gains and losses, homozygous deletions and focal amplifications, reported as auditable tables alongside ideograms and per-chromosome plots."
+}

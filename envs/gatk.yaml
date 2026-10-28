@@ -1,0 +1,9 @@
+# GATK for the germline-CNV (gCNV) rules. Pinned: the gCNV model and its
+# output layout have changed between minor releases, and a validation
+# result is only meaningful against a stated version.
+name: cnvkaryo_gatk
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - gatk4=4.6.2.0

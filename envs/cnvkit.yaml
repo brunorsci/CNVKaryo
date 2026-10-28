@@ -1,0 +1,12 @@
+name: cnvkit_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - cnvkit=0.9.10
+  - python=3.10
+  - numpy=1.25
+  - libstdcxx-ng>=12
+  - matplotlib>=3.5
+  
