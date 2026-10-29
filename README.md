@@ -85,8 +85,8 @@ that produced it, and where the boundary sits.
 ## Quick start
 
 ```bash
-git clone https://github.com/brunorsci/cnvkaryov1.git
-cd cnvkaryov1
+git clone https://github.com/brunorsci/CNVKaryo.git
+cd CNVKaryo
 conda env create -f envs/python_analysis.yaml
 
 # reference files: see docs/references.md
